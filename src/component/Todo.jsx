@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Todo.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const getLocalItmes = () => {
   let list = localStorage.getItem("lists");
@@ -54,6 +56,11 @@ const Todo = () => {
 
     list[idx]["status"] = !item.status;
     setItems(list);
+    if (item.status === true) {
+      toast.error("You can not edit or remove item !", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
   };
 
   const deleteItem = (index) => {
