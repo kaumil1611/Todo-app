@@ -1,0 +1,14 @@
+.mainDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+  flex-direction: column;
+}
+.eachItem {
+  display: flex;
+}
+.add-btn {
+  margin-left: 4px;
+  margin-top: 8px;
+}
